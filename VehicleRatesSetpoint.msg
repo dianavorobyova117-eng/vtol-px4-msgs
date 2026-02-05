@@ -10,3 +10,9 @@ float32 yaw		# [rad/s] yaw rate setpoint
 float32[3] thrust_body	# Normalized thrust command in body NED frame [-1,1]
 
 bool reset_integral # Reset roll/pitch/yaw integrals (navigation logic change)
+
+# MRAC control status (ThrustAccControl module)
+float32 mrac_ref_acc		# Reference acceleration setpoint (m/s^2)
+float32 mrac_actual_acc		# Actual measured acceleration (m/s^2)
+float32 mrac_ref_model_state	# MRAC reference model state (ideal trajectory) (m/s^2)
+float32 mrac_tracking_error	# Tracking error (actual - reference) (m/s^2)
